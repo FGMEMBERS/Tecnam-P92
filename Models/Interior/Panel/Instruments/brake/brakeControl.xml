@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>brakeControl.ac</path>
+
+  <animation>
+    <object-name>brakeControl</object-name>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>brakeControl</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>controls.applyBrakes(1)</script>
+      </binding>
+      <mod-up>
+        <binding>
+          <command>nasal</command>
+          <script>controls.applyBrakes(0)</script>
+        </binding>
+      </mod-up>
+    </action>
+  </animation>
+
+  <animation> 
+    <type>rotate</type>
+    <object-name>brakeControl</object-name>
+    <property>controls/gear/brake-left</property>
+    <factor>30</factor>
+    <axis> 
+      <x>  0 </x>
+      <y>  1 </y>
+      <z>  0 </z>
+    </axis>
+    <center>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>  
+    </center>
+  </animation>         
+ 
+</PropertyList>

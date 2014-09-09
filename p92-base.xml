@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <sim include="Nasal/views.xml">
+
+    <author>BARANGER Emmanuel (3D/FDM)/BACON Guillaume (Sounds)/DE L'HAMAIDE Clément (Systems)</author>
+    <aircraft-version>0.2</aircraft-version>
+    <status>early production</status>
+    <rating>
+      <FDM type="int">3</FDM>
+      <systems type="int">4</systems>
+      <cockpit type="int">4</cockpit>
+      <model type="int">4</model>
+    </rating>
+
+    <fuel-fraction>1.0</fuel-fraction>
+
+    <instrumentation>
+      <path>Aircraft/Tecnam-P92/System/instrumentation.xml</path>
+    </instrumentation>      
+
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic> 
+        <int type="int" n="0">  0 </int>                                      <!-- 0 immat -->
+        <int type="int" n="1">  0 </int>                                      <!-- 1 immat -->
+        <int type="int" n="2">  0 </int>                                      <!-- 2 immat -->
+        <int type="int" n="3">  0 </int>                                      <!-- 3 immat -->
+        <int type="int" n="4">  0 </int>                                      <!-- 4 immat -->
+        <int type="int" n="5">  0 </int>                                      <!-- 5 immat -->
+        <int type="bool" n="6"> 0 </int>                                      <!-- 6 smoke -->
+        <int type="int" n="7">  0 </int>                                      <!-- 7 color -->
+        <int n="8" alias="/systems/electrical/outputs/nav-lights">  0 </int>  <!-- 8 nav-lights -->
+        <int n="9" alias="/sim/model/lights/beacon/state">  false </int>      <!-- 9 strobe-lights -->
+        <int n="10" alias="/controls/electric/key-pos">  0 </int>             <!-- 10 key position -->
+        <float n="2" alias="/position/gear-agl-m">  0 </float>                <!-- 11 altitude for MP shadow -->
+        <float n="0" alias="/instrumentation/doors/crew/position-norm"/>
+        <float n="1" alias="/instrumentation/doors/passenger/position-norm"/>  
+      </generic>
+    </multiplay>
+
+    <help>
+      <title>U.L.M Tecnam P92 Echo</title>
+      <line>______________________________________________</line>
+      <key>
+        <name>d</name>
+        <desc>Open and Close pilot door</desc>
+      </key>
+      <key>
+        <name>D</name>
+        <desc>Open and Close passenger door</desc>
+      </key>
+      <key>
+        <name>B</name>
+        <desc>Parking brake</desc>
+      </key>
+
+    </help>
+
+    <p92>
+      <state type="int">0</state>
+      <airspeed-kmh type="float">0</airspeed-kmh>
+      <engine-rpm type="float">0</engine-rpm>
+      <engine-volume-low-rpm type="float">0</engine-volume-low-rpm>
+      <engine-volume-high-rpm type="float">0</engine-volume-high-rpm>
+      <rmi-view type="bool">false</rmi-view>
+    </p92>
+
+    <flaps>
+        <setting> 0.00 </setting> <!--  Cruise -->
+        <setting> 0.16 </setting> 
+        <setting> 0.33 </setting> <!-- 1 Flaps -->
+        <setting> 0.49 </setting> 
+        <setting> 0.66 </setting> <!-- 2 Flaps -->
+        <setting> 0.83 </setting> 
+        <setting> 1.00 </setting> <!--    Full -->
+    </flaps>
+
+    <weight n="0">
+      <name>Pilot</name>
+      <weight-lb>180</weight-lb>
+      <max-lb>240</max-lb>
+      <min-lb>140</min-lb>
+    </weight>
+
+    <weight n="1">
+      <name>Pax</name>
+      <weight-lb>0</weight-lb>
+      <max-lb>240</max-lb>
+      <min-lb>0</min-lb>
+    </weight>
+
+    <weight n="2">
+      <name>Baggage</name>
+      <weight-lb>0</weight-lb>
+      <max-lb>20</max-lb>
+      <min-lb>0</min-lb>
+    </weight>
+
+    <menubar include="Dialogs/p92-menu.xml"/>
+
+  </sim>
+
+  <input>
+    <keyboard include="Nasal/p92-keyboard.xml"/>
+  </input>
+
+  <engines>
+    <engine>
+      <rpm type="float">0</rpm>
+    </engine>
+  </engines>
+  
+  <controls>
+    <engines>
+      <engine>
+        <magnetoL type="bool">0</magnetoL>
+        <magnetoR type="bool">0</magnetoR>
+      </engine>
+    </engines>
+    <flight>
+      <flaps-anim type="int">0</flaps-anim>
+    </flight>
+    <switches>
+      <transponder-pos type="double"/> <!-- Force à être un "double" au lieu d'un "bool" -->
+    </switches>
+  </controls>
+
+  <nasal>
+    <doors>
+      <file>Aircraft/Tecnam-P92/Nasal/doors.nas</file>
+    </doors>
+    <p92>
+      <file>Aircraft/Tecnam-P92/Nasal/light.nas</file>
+      <file>Aircraft/Tecnam-P92/Nasal/immat.nas</file>
+      <file>Aircraft/Tecnam-P92/Nasal/electrical.nas</file>
+      <file>Aircraft/Tecnam-P92/Nasal/p92.nas</file>
+      <file>Aircraft/Tecnam-P92/Nasal/liveries.nas</file>
+    </p92>
+  </nasal>
+
+</PropertyList>
+

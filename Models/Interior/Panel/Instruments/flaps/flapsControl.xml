@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>flapsControl.ac</path>
+
+  <animation>
+    <object-name>fond</object-name>
+    <object-name>switch</object-name>
+    <object-name>flapsup</object-name>
+    <object-name>flapsdown</object-name>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>flapsup</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <interval-sec>0.3</interval-sec>
+      <binding>
+        <condition>
+          <equals>
+            <property>controls/electric/key</property>
+            <value>1</value>
+          </equals>
+        </condition>
+        <command>nasal</command>
+        <script>controls.flapsDown(-1)</script>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>controls/flight/flaps-anim</property>
+        <value type="int">-1</value>
+      </binding>          
+      <mod-up>
+        <binding>
+          <command>nasal</command>
+          <script>controls.flapsDown(0)</script>
+          <property>controls/flight/flaps-anim</property>
+          <value>0</value>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>controls/flight/flaps-anim</property>
+          <value type="int">0</value>
+        </binding>          
+      </mod-up>
+    </action>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>false</visible>
+    <object-name>flapsdown</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>true</repeatable>
+      <interval-sec>0.3</interval-sec>
+      <binding>
+        <condition>
+          <equals>
+            <property>controls/electric/key</property>
+            <value>1</value>
+          </equals>
+        </condition>
+        <command>nasal</command>
+        <script>controls.flapsDown(1)</script>
+        <property>controls/flight/flaps-anim</property>
+        <value>1</value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>controls/flight/flaps-anim</property>
+        <value type="int">1</value>
+      </binding>          
+      <mod-up>
+        <binding>
+          <command>nasal</command>
+          <script>controls.flapsDown(0)</script>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>controls/flight/flaps-anim</property>
+          <value type="int">0</value>
+        </binding>          
+      </mod-up>
+    </action>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>switch</object-name>
+    <property>controls/flight/flaps-anim-pos</property>
+    <interpolation>
+      <entry><ind> -1 </ind><dep> -50 </dep></entry>
+      <entry><ind>  0 </ind><dep>   0 </dep></entry>
+      <entry><ind>  1 </ind><dep>  50 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>
+

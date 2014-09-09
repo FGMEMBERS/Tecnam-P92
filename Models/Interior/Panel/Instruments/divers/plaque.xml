@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>plaque.ac</path>
+
+  <animation>
+    <type>pick</type>    
+    <visible>true</visible>
+    <object-name>plaque</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+        <command>property-adjust</command>
+        <property>controls/cabin/text</property>
+        <step> 1  </step>
+        <min>  0</min>
+        <max> 10 </max>
+        <wrap> 1 </wrap>
+      </binding>
+    </action>
+  </animation>
+
+  <!-- text 0 -->
+  <animation>
+    <type>textranslate</type>
+    <object-name>plaque</object-name>    
+    <property>controls/cabin/text</property>
+    <factor>0.1</factor>
+    <center>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>
+    </center>
+    <axis> 
+      <x>  1 </x> 
+      <y>  0 </y> 
+      <z>  0 </z> 
+    </axis> 
+  </animation>
+
+</PropertyList>

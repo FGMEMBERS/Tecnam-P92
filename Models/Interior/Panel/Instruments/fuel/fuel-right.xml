@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>fuel.ac</path>
+
+  <animation>
+    <object-name>robinet</object-name>
+  </animation>
+
+  <animation>
+   <type>pick</type>
+   <visible>true</visible>
+   <object-name>robinet</object-name>
+   <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-toggle</command>
+      <property>consumables/fuel/tank[1]/selected</property>
+    </binding>          
+   </action>
+  </animation>
+
+  <animation> 
+    <type>rotate</type>
+    <object-name>robinet</object-name>
+    <property>consumables/fuel/tank[1]/selected-pos</property>
+    <factor>-90</factor>
+    <axis> 
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+    <center>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0 </z-m>  
+    </center>
+  </animation>         
+ 
+</PropertyList>
