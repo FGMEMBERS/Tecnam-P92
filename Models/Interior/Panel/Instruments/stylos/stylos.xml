@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>stylos.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>stylo1</object-name>
+    <object-name>minestylo2</object-name>
+
+    <!-- Objets transparents -->
+    <object-name>trsstylo1</object-name>
+    <object-name>trsstylo2</object-name>
+    <object-name>trs2stylo2</object-name>
+  </animation>
+
+</PropertyList>

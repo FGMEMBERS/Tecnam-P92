@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList include="p92-base.xml">
+
+  <sim>
+
+    <description>Tecnam P92 Echo amphibious</description>
+    <flight-model archive="y">yasim</flight-model>
+    <aero archive="y">p92A-yasim</aero>
+
+    <startup>
+      <splash-texture>Aircraft/Tecnam-P92/Splash/p92A-splash.png</splash-texture>
+    </startup>
+
+    <sound>
+      <path archive="y">Aircraft/Tecnam-P92/Sounds/p92A-sound.xml</path>
+    </sound>
+
+    <model>
+      <path archive="y">Aircraft/Tecnam-P92/Models/p92A.xml</path>
+      <livery>
+        <file type="string">default</file>
+      </livery>
+    </model>
+
+  </sim>
+
+</PropertyList>
+

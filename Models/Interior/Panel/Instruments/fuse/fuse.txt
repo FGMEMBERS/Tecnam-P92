@@ -1,0 +1,7 @@
+fuse1 : Disp (3Amps)
+fuse2 : Instrument (3Amps)
+fuse3 : Trim (3Amps)
+fuse4 : Flaps (10Amps)
+fuse5 : Strobo Light (10Amps)
+fuse6 : Radio (3Amps)
+fuse7 : Land Light (10Amps)

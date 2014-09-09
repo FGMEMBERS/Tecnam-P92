@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- <PropertyList include="p92A-jsbsim-cnf.xml"> -->
+<PropertyList include="p92A-yasim-cnf.xml">
+
+  <sim>
+    <description>Tecnam P92 Echo amphibious (YASim)</description>
+  </sim>
+
+</PropertyList>

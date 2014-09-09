@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <default>
+    <menu n="10">
+      <label>Tecnam P92</label>
+      <enabled type="bool">true</enabled>
+      <item>
+        <label>Autostart</label>
+        <binding>
+          <command>property-toggle</command>
+          <property>sim/model/start-idling</property>
+        </binding>
+      </item>
+      <item>
+        <label>Select Livery</label>
+        <binding>
+          <command>nasal</command>
+          <script>aircraft.livery.dialog.toggle()</script>
+        </binding>
+      </item>
+      <item>
+        <label>Immatriculation</label>
+        <binding>
+          <command>nasal</command>
+          <script>p92.immat_dialog.toggle()</script>
+        </binding>
+      </item>
+      <item>
+        <label>Toggle Rmi-Vor-Adf</label>
+        <binding>
+          <command>property-toggle</command>
+          <property>sim/p92/rmi-view</property>          
+         </binding>
+       </item>
+    </menu>
+  </default>
+
+</PropertyList>
+

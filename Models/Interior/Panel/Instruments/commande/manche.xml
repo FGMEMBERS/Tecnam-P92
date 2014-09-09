@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>manche.ac</path>
+
+  <animation>
+    <name>globalmanche</name>
+    <object-name>pushtotalk</object-name>
+    <object-name>manche</object-name>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>pushtotalk</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+        <command>property-assign</command>
+        <property>instrumentation/comm/ptt</property>
+        <value>1</value>
+      </binding>
+      <mod-up>
+        <binding>
+          <command>property-assign</command>
+          <property>instrumentation/comm/ptt</property>
+          <value>0</value>
+        </binding>
+      </mod-up>
+    </action>
+  </animation>
+
+  <animation>
+    <type>translate</type>
+    <object-name>pushtotalk</object-name>
+    <property>instrumentation/comm/ptt-pos</property>
+    <factor>0.0015</factor>
+    <axis>
+      <x>  0 </x>
+      <y>  0 </y>
+      <z> -1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>globalmanche</object-name>
+    <property>surface-positions/elevator-pos-norm</property>
+    <factor>10</factor>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>globalmanche</object-name>
+    <property>surface-positions/left-aileron-pos-norm</property>
+    <factor>10</factor>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>
+

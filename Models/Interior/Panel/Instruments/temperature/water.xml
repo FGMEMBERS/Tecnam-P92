@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>temperature.ac</path>
+
+  <animation>
+    <object-name>fond</object-name>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>
+
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>
+    <emission>
+      <red>   0.9 </red>
+      <green> 0.5 </green>
+      <blue>  0.2 </blue>
+      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+    </emission>
+  </animation>
+
+  <animation> 
+    <type>rotate</type>
+    <object-name>needle</object-name>
+    <property>engines/engine/oil-temperature-degc</property>
+    <interpolation>
+      <entry><ind>   0 </ind><dep>   9 </dep></entry>
+      <entry><ind>  50 </ind><dep>  15 </dep></entry>
+      <entry><ind>  60 </ind><dep>  20 </dep></entry>
+      <entry><ind>  70 </ind><dep>  24 </dep></entry>
+      <entry><ind>  80 </ind><dep>  28 </dep></entry>
+      <entry><ind>  90 </ind><dep>  35 </dep></entry>
+      <entry><ind> 100 </ind><dep>  44 </dep></entry>
+      <entry><ind> 110 </ind><dep>  56 </dep></entry>
+      <entry><ind> 120 </ind><dep>  70 </dep></entry>
+      <entry><ind> 130 </ind><dep>  82 </dep></entry>
+      <entry><ind> 140 </ind><dep>  92 </dep></entry>
+      <entry><ind> 150 </ind><dep> 100 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.010 </z-m>  
+    </center>
+    <axis> 
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>         
+ 
+</PropertyList>

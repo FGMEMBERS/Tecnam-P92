@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>panel.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>panel</object-name>
+
+    <!-- Objets transparents -->
+  </animation>
+
+  <!-- Pedestal -->
+  <model>
+    <path>Aircraft/Tecnam-P92/Models/Interior/Panel/pedestal/pedestal.xml</path>
+    <offsets>
+      <x-m>  0.396 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.438 </z-m>
+      <pitch-deg> -1 </pitch-deg>
+    </offsets>
+  </model>
+
+  <!-- Manche pilote -->
+  <model>
+    <path>Aircraft/Tecnam-P92/Models/Interior/Panel/Instruments/commande/manche.xml</path>
+    <offsets>
+      <x-m>  0.830 </x-m>
+      <y-m> -0.210 </y-m>
+      <z-m> -0.471 </z-m>
+      <pitch-deg> 0 </pitch-deg>
+    </offsets>
+  </model>
+
+  <!-- Manche passager -->
+  <model>
+    <path>Aircraft/Tecnam-P92/Models/Interior/Panel/Instruments/commande/manche.xml</path>
+    <offsets>
+      <x-m>  0.830 </x-m>
+      <y-m>  0.210 </y-m>
+      <z-m> -0.471 </z-m>
+      <pitch-deg> 0 </pitch-deg>
+    </offsets>
+  </model>
+
+  <!-- Textes -->
+  <model>
+    <path>Aircraft/Tecnam-P92/Models/Interior/Panel/Instruments/text/text.xml</path>
+    <offsets>
+      <x-m>  0.235 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.000 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Key -->
+  <model>
+    <path>Aircraft/Tecnam-P92/Models/Interior/Panel/Instruments/key/key.xml</path>
+    <offsets>
+      <x-m>  0.235 </x-m>
+      <y-m> -0.363 </y-m>
+      <z-m>  0.014 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Magneto Left -->
+  <model>
+    <path>Aircraft/Tecnam-P92/Models/Interior/Panel/Instruments/magneto/magnetoL.xml</path>
+    <offsets>
+      <x-m>  0.236 </x-m>
+      <y-m> -0.131 </y-m>
+      <z-m> -0.137 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Magneto Right -->
+  <model>
+    <path>Aircraft/Tecnam-P92/Models/Interior/Panel/Instruments/magneto/magnetoR.xml</path>
+    <offsets>
+      <x-m>  0.236 </x-m>
+      <y-m> -0.098 </y-m>
+      <z-m> -0.137 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Altimètre -->
+  <model>
+    <path>Aircraft/Tecnam-P92/Models/Interior/Panel/Instruments/alt/alt.xml</path>
+    <offsets>
+      <x-m>  0.232 </x-m>  <!-- avant +/arriere - -->
+      <y-m> -0.162 </y-m>
+      <z-m>  0.062 </z-m>
+    </offsets>
+  </model>
+
+  <!-- VSI -->
+  <model>
+    <path>Aircraft/Tecnam-P92/Models/Interior/Panel/Instruments/vsi/vsi.xml</path>
+    <offsets>
+      <x-m>  0.235 </x-m>
+      <y-m> -0.053 </y-m>
+      <z-m>  0.059 </z-m>
+    </offsets>
+  </model>
+
+  <!-- ASI -->
+  <model>
+    <path>Aircraft/Tecnam-P92/Models/Interior/Panel/Instruments/asi/asi.xml</path>
+    <offsets>
+      <x-m>  0.235 </x-m>
+      <y-m> -0.271 </y-m>
+      <z-m>  0.062 </z-m>
+    </offsets>
+  </model>
+
+  <!-- RPM -->
+  <model>
+    <path>Aircraft/Tecnam-P92/Models/Interior/Panel/Instruments/rpm/rpm.xml</path>
+    <offsets>
+      <x-m> 0.235 </x-m>
+      <y-m> 0.050 </y-m>
+      <z-m> 0.112 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Water Temp -->
+  <model>
+    <path>Aircraft/Tecnam-P92/Models/Interior/Panel/Instruments/temperature/water.xml</path>
+    <offsets>
+      <x-m> 0.232 </x-m>
+      <y-m> 0.141 </y-m>
+      <z-m> 0.103 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Oil Temp -->
+  <model>
+    <path>Aircraft/Tecnam-P92/Models/Interior/Panel/Instruments/temperature/oil.xml</path>
+    <offsets>
+      <x-m> 0.232 </x-m>
+      <y-m> 0.224 </y-m>
+      <z-m> 0.031 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Pressure Oil -->
+  <model>
+    <path>Aircraft/Tecnam-P92/Models/Interior/Panel/Instruments/oil-pressure/oil-pressure.xml</path>
+    <offsets>
+      <x-m> 0.232 </x-m>
+      <y-m> 0.291 </y-m>
+      <z-m> 0.031 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Bille -->
+  <model>
+    <path>Aircraft/Tecnam-P92/Models/Interior/Panel/Instruments/turn/turn.xml</path>
+    <offsets>
+      <x-m>  0.231 </x-m>
+      <y-m> -0.163 </y-m>
+      <z-m> -0.031 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- Emplacement vide -->
+  <model>
+    <path>Aircraft/Tecnam-P92/Models/Interior/Panel/Instruments/vide/small-vide.xml</path>
+    <offsets>
+      <x-m>  0.239 </x-m>
+      <y-m>  0.224 </y-m>
+      <z-m> -0.040 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Emplacement vide -->
+  <model>
+    <path>Aircraft/Tecnam-P92/Models/Interior/Panel/Instruments/vide/small-vide.xml</path>
+    <offsets>
+      <x-m>  0.239 </x-m>
+      <y-m>  0.291 </y-m>
+      <z-m> -0.040 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Emplacement vide -->
+  <model>
+    <path>Aircraft/Tecnam-P92/Models/Interior/Panel/Instruments/vide/small-vide.xml</path>
+    <offsets>
+      <x-m>  0.239 </x-m>
+      <y-m>  0.359 </y-m>
+      <z-m> -0.040 </z-m>
+    </offsets>
+  </model>
+
+  <!-- KT76A -->
+  <model>
+    <path>Aircraft/Tecnam-P92/Models/Interior/Panel/Instruments/KT76A/KT76A.xml</path>
+    <offsets>
+      <x-m>  0.232 </x-m>
+      <y-m>  0.104 </y-m>
+      <z-m> -0.026 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Compass -->
+  <model>
+    <path>Aircraft/Tecnam-P92/Models/Interior/Panel/Instruments/radio-compass/compas.xml</path>
+    <offsets>
+      <x-m>  0.229 </x-m>
+      <y-m> -0.272 </y-m>
+      <z-m> -0.040 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Radio -->
+  <model>
+    <path>Aircraft/Tecnam-P92/Models/Interior/Panel/Instruments/ky196/ky196-comm1.xml</path>
+    <offsets>
+      <x-m>  0.238 </x-m>
+      <y-m>  0.104 </y-m>
+      <z-m> -0.064 </z-m>
+    </offsets>
+  </model>
+  
+  
+  
+  <!-- fuse1 -->
+  <model>
+    <path>Aircraft/Tecnam-P92/Models/Interior/Panel/Instruments/fuse/fusible1.xml</path>
+    <offsets>
+      <x-m>  0.235 </x-m>
+      <y-m>  0.224 </y-m>
+      <z-m> -0.137 </z-m>
+    </offsets>
+  </model>
+
+  <!-- fuse2 -->
+  <model>
+    <path>Aircraft/Tecnam-P92/Models/Interior/Panel/Instruments/fuse/fusible2.xml</path>
+    <offsets>
+      <x-m>  0.235 </x-m>
+      <y-m>  0.248 </y-m>
+      <z-m> -0.137 </z-m>
+    </offsets>
+  </model>
+
+  <!-- fuse3 -->
+  <model>
+    <path>Aircraft/Tecnam-P92/Models/Interior/Panel/Instruments/fuse/fusible3.xml</path>
+    <offsets>
+      <x-m>  0.235 </x-m>
+      <y-m>  0.272 </y-m>
+      <z-m> -0.137 </z-m>
+    </offsets>
+  </model>
+
+  <!-- fuse4 -->
+  <model>
+    <path>Aircraft/Tecnam-P92/Models/Interior/Panel/Instruments/fuse/fusible4.xml</path>
+    <offsets>
+      <x-m>  0.235 </x-m>
+      <y-m>  0.296 </y-m>
+      <z-m> -0.137 </z-m>
+    </offsets>
+  </model>
+
+  <!-- fuse5 -->
+  <model>
+    <path>Aircraft/Tecnam-P92/Models/Interior/Panel/Instruments/fuse/fusible5.xml</path>
+    <offsets>
+      <x-m>  0.235 </x-m>
+      <y-m>  0.320 </y-m>
+      <z-m> -0.137 </z-m>
+    </offsets>
+  </model>
+
+  <!-- fuse6 -->
+  <model>
+    <path>Aircraft/Tecnam-P92/Models/Interior/Panel/Instruments/fuse/fusible6.xml</path>
+    <offsets>
+      <x-m>  0.235 </x-m>
+      <y-m>  0.344 </y-m>
+      <z-m> -0.137 </z-m>
+    </offsets>
+  </model>
+
+  <!-- fuse7 -->
+  <model>
+    <path>Aircraft/Tecnam-P92/Models/Interior/Panel/Instruments/fuse/fusible7.xml</path>
+    <offsets>
+      <x-m>  0.235 </x-m>
+      <y-m>  0.368 </y-m>
+      <z-m> -0.137 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Alternator LED -->
+  <model>
+    <path>Aircraft/Tecnam-P92/Models/Interior/Panel/Instruments/lamps/alt.xml</path>
+    <offsets>
+      <x-m> 0.235 </x-m>
+      <y-m> 0.283 </y-m>
+      <z-m> 0.095 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Strobe Light -->
+  <model>
+    <path>Aircraft/Tecnam-P92/Models/Interior/Panel/Instruments/switch/strobe.xml</path>
+    <offsets>
+      <x-m>  0.235 </x-m>
+      <y-m>  0.077 </y-m>
+      <z-m> -0.137 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Transponder switch -->
+  <model>
+    <path>Aircraft/Tecnam-P92/Models/Interior/Panel/Instruments/switch/transponder.xml</path>
+    <offsets>
+      <x-m>  0.235 </x-m>
+      <y-m>  0.118 </y-m>
+      <z-m> -0.137 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Trim Indicator -->
+  <model>
+    <path>Aircraft/Tecnam-P92/Models/Interior/Panel/Instruments/trim/TrimIndicator.xml</path>
+    <offsets>
+      <x-m>  0.240 </x-m>
+      <y-m> -0.107 </y-m>
+      <z-m>  0.133 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Flaps LED -->
+  <model>
+    <path>Aircraft/Tecnam-P92/Models/Interior/Panel/Instruments/flaps/flapslamps.xml</path>
+    <offsets>
+      <x-m> 0.235 </x-m>
+      <y-m> 0.212 </y-m>
+      <z-m> 0.123 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Flaps controls -->
+  <model>
+    <path>Aircraft/Tecnam-P92/Models/Interior/Panel/Instruments/flaps/flapsControl.xml</path>
+    <offsets>
+      <x-m>  0.235 </x-m>
+      <y-m>  0.004 </y-m>
+      <z-m> -0.062 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Throttle Left -->
+  <model>
+    <path>Aircraft/Tecnam-P92/Models/Interior/Panel/Instruments/throttle/throttle.xml</path>
+    <offsets>
+      <x-m>  0.235 </x-m>
+      <y-m> -0.348 </y-m>
+      <z-m> -0.039 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Throttle Right -->
+  <model>
+    <path>Aircraft/Tecnam-P92/Models/Interior/Panel/Instruments/throttle/throttle.xml</path>
+    <offsets>
+      <x-m>  0.235 </x-m>
+      <y-m>  0.004 </y-m>
+      <z-m> -0.138 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Heat -->
+  <model>
+    <path>Aircraft/Tecnam-P92/Models/Interior/Panel/Instruments/divers/heat.xml</path>
+    <offsets>
+      <x-m>  0.235 </x-m>
+      <y-m>  0.154 </y-m>
+      <z-m> -0.138 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Brake -->
+  <model>
+    <path>Aircraft/Tecnam-P92/Models/Interior/Panel/Instruments/brake/brakeControl.xml</path>
+    <offsets>
+      <x-m>  0.360 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.390 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Trim Switch -->
+  <model>
+    <path>Aircraft/Tecnam-P92/Models/Interior/Panel/Instruments/trim/trimSwitch.xml</path>
+    <offsets>
+      <x-m>  0.462 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -0.389 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Stylos -->
+  <model>
+    <path>Aircraft/Tecnam-P92/Models/Interior/Panel/Instruments/stylos/stylos.xml</path>
+    <offsets>
+      <x-m>  0.235 </x-m>
+      <y-m> -0.005 </y-m>
+      <z-m>  0.065 </z-m>
+    </offsets>
+  </model>
+
+  <!-- RMI -->
+  <model>
+    <name>AllRmi</name>
+    <path>Aircraft/Tecnam-P92/Models/Interior/Panel/Instruments/rmi/rmi.xml</path>
+    <offsets>
+      <x-m>  0.239 </x-m>
+      <y-m> -0.055 </y-m>
+      <z-m> -0.035 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- Plaque centrale -->  
+  <model>
+    <name>centerPlaque</name>
+    <path>Aircraft/Tecnam-P92/Models/Interior/Panel/Instruments/divers/plaque.xml</path>
+    <offsets>
+      <x-m>  0.235 </x-m>
+      <y-m>  0.104 </y-m>
+      <z-m>  0.033 </z-m>
+    </offsets>
+  </model>
+
+  <!--Recepteur ADF-KR87 -->
+  <model>
+    <name>AllKR87</name>
+    <path>Aircraft/Tecnam-P92/Models/Interior/Panel/Instruments/adf/kr87.xml</path>
+    <offsets>
+      <x-m>  0.238 </x-m>
+      <y-m>  0.104 </y-m>
+      <z-m> 0.014 </z-m>
+    </offsets>
+  </model>
+
+  <!--Recepteur VOR-KN53 -->
+  <model>
+    <name>AllKN53</name>
+    <path>Aircraft/Tecnam-P92/Models/Interior/Panel/Instruments/nav/kn53.xml</path>
+    <offsets>
+      <x-m>  0.238 </x-m>
+      <y-m>  0.104 </y-m>
+      <z-m> 0.048</z-m>
+    </offsets>
+  </model>
+
+  <!-- Emplacement vide -->
+  <model>
+    <name>VideLarge</name>
+    <path>Aircraft/Tecnam-P92/Models/Interior/Panel/Instruments/vide/large-vide.xml</path>
+    <offsets>
+      <x-m>  0.234 </x-m>
+      <y-m> -0.055 </y-m>
+      <z-m> -0.035 </z-m>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>AllRmi</object-name>
+    <object-name>AllKN53</object-name>
+	  <object-name>AllKR87</object-name>	
+    <condition>
+      <property>sim/p92/rmi-view</property>
+    </condition>       
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>VideLarge</object-name>
+    <object-name>centerPlaque</object-name>
+    <condition>
+      <not>
+        <property>sim/p92/rmi-view</property>
+      </not>
+    </condition>
+  </animation>
+
+</PropertyList>
+

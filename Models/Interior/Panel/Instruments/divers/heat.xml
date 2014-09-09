@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>heat.ac</path>
+
+  <animation>
+   <object-name>fond</object-name>
+   <object-name>heat</object-name>
+  </animation>
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>heat</object-name>
+    <action>
+      <button>0</button>
+      <binding>
+        <command>property-toggle</command>
+        <property>controls/cabin/heat</property>
+      </binding>
+    </action>
+  </animation>
+
+  <animation>
+   <type>translate</type>
+   <object-name>heat</object-name>
+   <property>controls/cabin/heat-pos</property>
+   <factor>0.018</factor>
+   <axis>
+    <x> -1 </x>
+    <y>  0 </y>
+    <z>  0 </z>
+   </axis>
+  </animation>
+
+</PropertyList>

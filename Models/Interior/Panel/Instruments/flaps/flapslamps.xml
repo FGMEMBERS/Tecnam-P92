@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>flapslamps.ac</path>
+
+  <animation>
+    <object-name>lampgon</object-name>
+    <object-name>lamp1on</object-name>
+    <object-name>lamp2on</object-name>
+    <object-name>lamp3on</object-name>
+    <object-name>lamp4on</object-name>
+    <object-name>lamp5on</object-name>
+    <object-name>lamp6on</object-name>
+    <object-name>lampgoff</object-name>
+    <object-name>lamp1off</object-name>
+    <object-name>lamp2off</object-name>
+    <object-name>lamp3off</object-name>
+    <object-name>lamp4off</object-name>
+    <object-name>lamp5off</object-name>
+    <object-name>lamp6off</object-name>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>lampgon</object-name>
+    <condition>
+      <and>
+        <equals>
+          <property>controls/electric/battery-switch</property>
+          <value> 1 </value>
+        </equals>
+        <greater-than>
+          <property>systems/electrical/outputs/instrument-lights</property>
+          <value>0.0001</value>
+        </greater-than>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>lamp1on</object-name>
+    <condition>
+      <and>
+        <greater-than-equals>
+          <property>controls/flight/flaps</property>
+          <value> 0.16 </value>
+        </greater-than-equals>
+        <greater-than>
+          <property>systems/electrical/outputs/instrument-lights</property>
+          <value>0.0001</value>
+        </greater-than>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>lamp2on</object-name>
+    <condition>
+      <and>
+        <greater-than-equals>
+          <property>controls/flight/flaps</property>
+          <value> 0.33 </value>
+        </greater-than-equals>
+        <greater-than>
+          <property>systems/electrical/outputs/instrument-lights</property>
+          <value>0.0001</value>
+        </greater-than>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>lamp3on</object-name>
+    <condition>
+      <and>
+        <greater-than-equals>
+          <property>controls/flight/flaps</property>
+          <value> 0.49 </value>
+        </greater-than-equals>
+        <greater-than>
+          <property>systems/electrical/outputs/instrument-lights</property>
+          <value>0.0001</value>
+        </greater-than>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>lamp4on</object-name>
+    <condition>
+      <and>
+        <greater-than-equals>
+          <property>controls/flight/flaps</property>
+          <value> 0.66 </value>
+        </greater-than-equals>
+        <greater-than>
+          <property>systems/electrical/outputs/instrument-lights</property>
+          <value>0.0001</value>
+        </greater-than>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>lamp5on</object-name>
+    <condition>
+      <and>
+        <greater-than-equals>
+          <property>controls/flight/flaps</property>
+          <value> 0.83 </value>
+        </greater-than-equals>
+        <greater-than>
+          <property>systems/electrical/outputs/instrument-lights</property>
+          <value>0.0001</value>
+        </greater-than>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>lamp6on</object-name>
+    <condition>
+      <and>
+        <greater-than-equals>
+          <property>controls/flight/flaps</property>
+          <value> 1 </value>
+        </greater-than-equals>
+        <greater-than>
+          <property>systems/electrical/outputs/instrument-lights</property>
+          <value>0.0001</value>
+        </greater-than>
+      </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>lampgoff</object-name>
+    <object-name>lamp1off</object-name>
+    <object-name>lamp2off</object-name>
+    <object-name>lamp3off</object-name>
+    <object-name>lamp4off</object-name>
+    <object-name>lamp5off</object-name>
+    <object-name>lamp6off</object-name>
+    <emission>
+      <red>   0 </red>
+      <green> 0 </green>
+      <blue>  0 </blue>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>lampgon</object-name>
+    <object-name>lamp1on</object-name>
+    <object-name>lamp2on</object-name>
+    <object-name>lamp3on</object-name>
+    <object-name>lamp4on</object-name>
+    <object-name>lamp5on</object-name>
+    <object-name>lamp6on</object-name>
+    <emission>
+      <red>   1 </red>
+      <green> 1 </green>
+      <blue>  1 </blue>
+    </emission>
+  </animation>
+
+</PropertyList>
+

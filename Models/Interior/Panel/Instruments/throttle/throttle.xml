@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>throttle.ac</path>
+
+  <animation>
+   <object-name>fond</object-name>
+   <object-name>throttle</object-name>
+  </animation>
+
+  <animation>
+   <type>pick</type>
+   <visible>true</visible>
+   <object-name>throttle</object-name>
+   <action>
+     <button>3</button>
+     <binding>
+       <command>property-adjust</command>
+       <property>controls/engines/engine[0]/throttle</property>
+       <step>0.01</step>
+     </binding>
+   </action>
+  </animation>
+
+  <animation>
+   <type>pick</type>
+   <visible>true</visible>
+   <object-name>throttle</object-name>
+   <action>
+     <button>4</button>
+     <binding>
+       <command>property-adjust</command>
+       <property>controls/engines/engine[0]/throttle</property>
+       <step>-0.01</step>
+     </binding>
+   </action>
+  </animation>
+
+  <animation>
+   <type>translate</type>
+   <object-name>throttle</object-name>
+   <property>controls/engines/engine[0]/throttle</property>
+   <interpolation>
+     <entry><ind> 0 </ind><dep>  0.00 </dep></entry>
+     <entry><ind> 1 </ind><dep> -0.08 </dep></entry>
+   </interpolation>
+   <axis>
+    <x> 1 </x>
+    <y> 0 </y>
+    <z> 0 </z>
+   </axis>
+  </animation>
+
+</PropertyList>
