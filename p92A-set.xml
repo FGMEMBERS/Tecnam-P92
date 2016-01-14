@@ -5,6 +5,8 @@
 
   <sim>
     <description>Tecnam P92 Echo amphibious (YASim)</description>
+    <variant-of>p92</variant-of>
+    
   </sim>
 
 </PropertyList>
