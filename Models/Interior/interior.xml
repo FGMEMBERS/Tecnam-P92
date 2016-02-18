@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
@@ -7,6 +7,7 @@
   <animation>
     <!-- Objets opaques -->
     <object-name>interieur</object-name>
+    <object-name>structure</object-name>
     <object-name>intporteG</object-name>
     <object-name>intporteD</object-name>
     <object-name>inttour</object-name>
@@ -19,22 +20,21 @@
     <object-name>intvitreD</object-name>
   </animation>
 
-  <animation>
-    <type>noshadow</type>
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/Tecnam-P92/Models/Effects/Glass/glass</inherits-from>
     <object-name>intvitres</object-name>
     <object-name>intvitreG</object-name>
     <object-name>intvitreD</object-name>
-  </animation>
-
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+  </effect>
+  
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
     <object-name>intvitres</object-name>
     <object-name>intvitreG</object-name>
     <object-name>intvitreD</object-name>
-  </animation>
-
+  </effect>
+  
   <!-- Pilote -->
   <model>
     <path>Aircraft/Tecnam-P92/Models/Pilot/pilot.xml</path>
@@ -55,14 +55,28 @@
     </offsets>
   </model>
 
-  <!-- Siège et banquette arrière -->
+  <!-- Sièges -->
+  <model>
+    <path>Aircraft/Tecnam-P92/Models/Interior/Seat/pilotseat.xml</path>
+    <offsets>
+      <x-m> -1.129 </x-m>
+      <y-m> -0.251 </y-m>
+      <z-m> -0.180 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Tecnam-P92/Models/Interior/Seat/pilotseat.xml</path>
+    <offsets>
+      <x-m> -1.129 </x-m>
+      <y-m>  0.251 </y-m>
+      <z-m> -0.180 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- banquette arrière -->
   <model>
     <path>Aircraft/Tecnam-P92/Models/Interior/Seat/seat.xml</path>
-    <offsets>
-      <x-m>  0.000 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m>  0.000 </z-m>
-    </offsets>
   </model>
 
   <!-- Robinet Fuel Left -->
@@ -82,7 +96,6 @@
       <x-m> -1.739 </x-m>
       <y-m>  0.435 </y-m>
       <z-m> -0.054 </z-m>
-      <roll-deg>      0 </roll-deg>
       <pitch-deg>    90 </pitch-deg>
       <heading-deg> 180 </heading-deg>
     </offsets>
@@ -128,7 +141,7 @@
       <repeatable>false</repeatable>  
       <binding>
         <command>nasal</command>
-        <script>doors.doorsystem.crewexport();</script>
+        <script>doors.crew.toggle();</script>
       </binding>
     </action>
   </animation>
@@ -136,7 +149,7 @@
   <animation>
     <type>rotate</type>
     <object-name>IntPorteGauche</object-name>
-    <property>instrumentation/doors/crew/position-norm</property>
+    <property>sim/model/door-positions/crew/position-norm</property>
     <factor> -120 </factor>
     <center>
       <x-m> -1.790 </x-m>
@@ -166,7 +179,7 @@
       <repeatable>false</repeatable>  
       <binding>
         <command>nasal</command>
-        <script>doors.doorsystem.passengerexport();</script>
+        <script>doors.passenger.toggle();</script>
       </binding>
     </action>
   </animation>
@@ -174,7 +187,7 @@
   <animation>
     <type>rotate</type>
     <object-name>IntPorteDroite</object-name>
-    <property>instrumentation/doors/passenger/position-norm</property>
+    <property>sim/model/door-positions/passenger/position-norm</property>
     <factor> 120 </factor>
     <center>
       <x-m> -1.790 </x-m>
@@ -189,4 +202,3 @@
   </animation>
 
 </PropertyList>
-

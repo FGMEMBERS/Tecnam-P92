@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
-
+  
   <path>flapsControl.ac</path>
-
+  
   <animation>
     <object-name>fond</object-name>
     <object-name>switch</object-name>
     <object-name>flapsup</object-name>
     <object-name>flapsdown</object-name>
   </animation>
-
+  
   <animation>
     <type>pick</type>
     <visible>false</visible>
@@ -49,7 +49,7 @@
       </mod-up>
     </action>
   </animation>
-
+  
   <animation>
     <type>pick</type>
     <visible>false</visible>
@@ -88,7 +88,7 @@
       </mod-up>
     </action>
   </animation>
-
+  
   <animation>
     <type>rotate</type>
     <object-name>switch</object-name>
@@ -104,6 +104,5 @@
       <z> 0 </z>
     </axis>
   </animation>
-
+  
 </PropertyList>
-

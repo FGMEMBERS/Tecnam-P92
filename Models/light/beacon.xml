@@ -1,14 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
   <path>RedLight.ac</path>
 
   <animation>
-    <type>noshadow</type>
+    <!-- Objets opaques -->
+    
+    <!-- Objets transparents -->
     <object-name>Light</object-name>
   </animation>
-
+  
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>Light</object-name>
+  </effect>
+  
   <animation>
     <type>alpha-test</type>
     <alpha-factor>0.01</alpha-factor>
@@ -24,10 +31,7 @@
     <type>select</type>
     <object-name>Light</object-name>
     <condition>
-      <and>
-        <property>sim/multiplay/generic/int[10]</property>
-        <property>sim/multiplay/generic/int[9]</property>
-      </and>
+      <property>/sim/model/lights/beacon/state</property>
     </condition>
   </animation>
 
@@ -35,10 +39,9 @@
     <type>material</type>
     <object-name>Light</object-name>
     <emission>
-      <red>   0.5 </red>
-      <green> 0.5 </green>
-      <blue>  0.5 </blue>
-      <factor-prop>sim/multiplay/generic/int[9]</factor-prop>
+      <red>   2 </red>
+      <green> 0 </green>
+      <blue>  0 </blue>
     </emission>
   </animation>
 
@@ -52,4 +55,12 @@
     </interpolation>
   </animation>
 
+  <animation>
+    <type>select</type>
+    <object-name>Light</object-name>
+    <condition>
+      <property>/controls/lighting/strobe-lights</property>
+    </condition>
+  </animation>
+  
 </PropertyList>

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
-
+  
   <path>plaque.ac</path>
-
+  
   <animation>
     <type>pick</type>    
     <visible>true</visible>
@@ -20,23 +20,18 @@
       </binding>
     </action>
   </animation>
-
+  
   <!-- text 0 -->
   <animation>
     <type>textranslate</type>
     <object-name>plaque</object-name>    
     <property>controls/cabin/text</property>
-    <factor>0.1</factor>
-    <center>
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
-    </center>
+    <factor> 0.1 </factor>
     <axis> 
       <x>  1 </x> 
       <y>  0 </y> 
       <z>  0 </z> 
     </axis> 
   </animation>
-
+  
 </PropertyList>

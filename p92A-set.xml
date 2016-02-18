@@ -1,11 +1,33 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
-<!-- <PropertyList include="p92A-jsbsim-cnf.xml"> -->
-<PropertyList include="p92A-yasim-cnf.xml">
+<PropertyList include="p92-base.xml">
 
   <sim>
     <description>Tecnam P92 Echo amphibious (YASim)</description>
-    <variant-of>p92</variant-of>
+    <flight-model archive="y">yasim</flight-model>
+    <aero archive="y">p92A-yasim</aero>
+    
+    <rating>
+      <FDM type="int">3</FDM>
+      <systems type="int">4</systems>
+      <cockpit type="int">4</cockpit>
+      <model type="int">4</model>
+    </rating>
+    
+    <startup>
+      <splash-texture>Aircraft/Tecnam-P92/Splash/p92A-splash.png</splash-texture>
+    </startup>
+    
+    <sound>
+      <path archive="y">Aircraft/Tecnam-P92/Sounds/p92A-sound.xml</path>
+    </sound>
+    
+    <model>
+      <path archive="y">Aircraft/Tecnam-P92/Models/p92A.xml</path>
+      <livery>
+        <file type="string">default</file>
+      </livery>
+    </model>
     
   </sim>
 

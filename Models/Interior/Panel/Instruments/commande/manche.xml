@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
-
+  
   <path>manche.ac</path>
-
+  
   <animation>
     <name>globalmanche</name>
     <object-name>pushtotalk</object-name>
     <object-name>manche</object-name>
   </animation>
-
+  
   <animation>
     <type>pick</type>
     <visible>true</visible>
@@ -30,42 +30,41 @@
       </mod-up>
     </action>
   </animation>
-
+  
   <animation>
     <type>translate</type>
     <object-name>pushtotalk</object-name>
     <property>instrumentation/comm/ptt-pos</property>
-    <factor>0.0015</factor>
+    <factor> 0.0015 </factor>
     <axis>
       <x>  0 </x>
       <y>  0 </y>
       <z> -1 </z>
     </axis>
   </animation>
-
+  
   <animation>
     <type>rotate</type>
     <object-name>globalmanche</object-name>
     <property>surface-positions/elevator-pos-norm</property>
-    <factor>10</factor>
+    <factor> 10 </factor>
     <axis>
       <x>  0 </x>
       <y> -1 </y>
       <z>  0 </z>
     </axis>
   </animation>
-
+  
   <animation>
     <type>rotate</type>
     <object-name>globalmanche</object-name>
     <property>surface-positions/left-aileron-pos-norm</property>
-    <factor>10</factor>
+    <factor> 10 </factor>
     <axis>
       <x> -1 </x>
       <y>  0 </y>
       <z>  0 </z>
     </axis>
   </animation>
-
+  
 </PropertyList>
-

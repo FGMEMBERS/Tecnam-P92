@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
-
+  
   <path>parking-brake.ac</path>
-
+  
   <animation>
     <object-name>robinet</object-name>
   </animation>
-
+  
   <animation>
     <type>pick</type>
     <visible>true</visible>
@@ -21,22 +21,17 @@
       </binding>          
     </action>
   </animation>
-
+  
   <animation> 
     <type>rotate</type>
     <object-name>robinet</object-name>
     <property>controls/gear/brake-parking-pos</property>
-    <factor>90</factor>
+    <factor> 90 </factor>
     <axis> 
       <x>  0 </x>
       <y>  0 </y>
       <z> -1 </z>
     </axis>
-    <center>
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>  
-    </center>
   </animation>         
- 
+  
 </PropertyList>
