@@ -1,9 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
   <path>main.ac</path>
 
+  <sound>
+    <path>Aircraft/Tecnam-P92/Sounds/mp-sound.xml</path>
+  </sound>
+  
   <nasal>
     <load>
       var livery_update = aircraft.livery_update.new("Aircraft/Tecnam-P92/Models/Liveries", 10);
@@ -13,9 +17,9 @@
       var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);
       var float_1 = self.getNode("sim/multiplay/generic/float[1]", 1);
       
-      var crew_door = self.getNode("instrumentation/doors/crew/position-norm", 1);
-      var passenger_door = self.getNode("instrumentation/doors/passenger/position-norm", 1);
-    
+      var crew_door = self.getNode("sim/model/door-positions/crew/position-norm", 1);
+      var passenger_door = self.getNode("sim/model/door-positions/passenger/position-norm", 1);
+      
       crew_door.alias(float_0);
       passenger_door.alias(float_1);
     </load>
@@ -45,6 +49,7 @@
 
     <object-name>trous</object-name>
     <object-name>trimtrous</object-name>
+    <object-name>echappe</object-name>
     <object-name>helice</object-name>
 
     <!-- Transparence -->
@@ -78,40 +83,17 @@
 
     <object-name>trous</object-name>
     <object-name>trimtrous</object-name>
+    <object-name>echappe</object-name>
     <object-name>helice</object-name>
 
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
     <texture>texture.png</texture>
-<!--
-    <diffuse>
-      <red-prop>diffuse/red</red-prop>
-      <green-prop>diffuse/green</green-prop>
-      <blue-prop>diffuse/blue</blue-prop>
-    </diffuse>
-
-    <ambient>
-      <red-prop>ambient/red</red-prop>
-      <green-prop>ambient/green</green-prop>
-      <blue-prop>ambient/blue</blue-prop>
-    </ambient>
--->
     <specular>
       <red-prop>specular/red</red-prop>
       <green-prop>specular/green</green-prop>
       <blue-prop>specular/blue</blue-prop>
     </specular>
-
-    <emission>
-      <red-prop>emission/red</red-prop>
-      <green-prop>emission/green</green-prop>
-      <blue-prop>emission/blue</blue-prop>
-    </emission>
-<!--
-    <shininess>
-      <shininess-prop>shininess</shininess-prop>
-    </shininess>
--->
   </animation>
 
   <effect>
@@ -132,17 +114,16 @@
     <object-name>supportlampes</object-name>
   </effect>
 
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/Tecnam-P92/Models/Effects/Glass/glass</inherits-from>
     <object-name>vitres</object-name>
     <object-name>vitreG</object-name>
     <object-name>vitreD</object-name>
-  </animation>
-
-  <animation>
-    <type>noshadow</type>
+  </effect>
+  
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
     <object-name>vitres</object-name>
     <object-name>vitreG</object-name>
     <object-name>vitreD</object-name>
@@ -152,14 +133,8 @@
     <object-name>lampeverte</object-name>
     <object-name>lamperouge</object-name>
     <object-name>lampesblanches</object-name>
-  </animation>
-
-  <!-- explosion -->
-  <model>
-    <name>Fire</name>
-    <path>Aircraft/Tecnam-P92/Models/Effects/fire/fire.xml</path>
-  </model>
-
+  </effect>
+  
   <!-- Intérieur -->
   <model>
     <path>Aircraft/Tecnam-P92/Models/Interior/interior.xml</path>
@@ -170,6 +145,16 @@
     <path>Aircraft/Tecnam-P92/Models/Immat/immat.xml</path>
   </model>
 
+  <model>
+    <path>Aircraft/Tecnam-P92/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -2.298 </x-m>
+      <y-m> -0.079 </y-m>
+      <z-m> -0.646 </z-m>
+      <pitch-deg>  45 </pitch-deg>
+    </offsets>
+  </model>
+  
   <!-- L'hélice --> 
   <animation>
     <name>HeliceComplete</name>
@@ -222,6 +207,12 @@
   <animation>
     <type>spin</type>
     <object-name>HeliceComplete</object-name>
+    <condition>
+      <greater-than>
+        <property>engines/engine[0]/rpm</property>
+        <value> 5 </value>
+      </greater-than>
+    </condition>
     <property>/engines/engine[0]/rpm</property>
     <factor> 1 </factor>
     <center>
@@ -371,7 +362,7 @@
       <repeatable>false</repeatable>  
       <binding>
         <command>nasal</command>
-        <script>doors.doorsystem.crewexport();</script>
+        <script>doors.crew.toggle();</script>
       </binding>
     </action>
   </animation>
@@ -379,7 +370,7 @@
   <animation>
     <type>rotate</type>
     <object-name>PorteGauche</object-name>
-    <property>instrumentation/doors/crew/position-norm</property>
+    <property>sim/model/door-positions/crew/position-norm</property>
     <factor> -120 </factor>
     <center>
       <x-m> -1.790 </x-m>
@@ -407,7 +398,7 @@
       <repeatable>false</repeatable>  
       <binding>
         <command>nasal</command>
-        <script>doors.doorsystem.passengerexport();</script>
+        <script>doors.passenger.toggle();</script>
       </binding>
     </action>
   </animation>
@@ -415,7 +406,7 @@
   <animation>
     <type>rotate</type>
     <object-name>PorteDroite</object-name>
-    <property>instrumentation/doors/passenger/position-norm</property>
+    <property>sim/model/door-positions/passenger/position-norm</property>
     <factor> 120 </factor>
     <center>
       <x-m> -1.790 </x-m>
@@ -431,7 +422,7 @@
 
   <!-- Ajout des effets lumineux -->
   <model>
-    <path>Aircraft/Tecnam-P92/Models/light/WhiteLight.xml</path>
+    <path>Aircraft/Tecnam-P92/Models/light/beacon.xml</path>
     <offsets>
       <x-m> 2.937 </x-m>
       <y-m> 0.000 </y-m>
@@ -449,7 +440,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Tecnam-P92/Models/light/WhiteLight.xml</path>
+    <path>Aircraft/Tecnam-P92/Models/light/StrobeLight.xml</path>
     <offsets>
       <x-m> -1.462 </x-m>
       <y-m> -4.697 </y-m>
@@ -467,7 +458,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Tecnam-P92/Models/light/WhiteLight.xml</path>
+    <path>Aircraft/Tecnam-P92/Models/light/StrobeLight.xml</path>
     <offsets>
       <x-m> -1.462 </x-m>
       <y-m>  4.697 </y-m>
@@ -476,4 +467,3 @@
   </model>
 
 </PropertyList>
-

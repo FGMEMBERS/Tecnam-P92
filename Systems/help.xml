@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+  
+  <title>U.L.M Tecnam P92 Echo</title>
+  <line>______________________________________________</line>
+  <key>
+    <name>d</name>
+    <desc>Open and Close pilot door</desc>
+  </key>
+  <key>
+    <name>D</name>
+    <desc>Open and Close passenger door</desc>
+  </key>
+  <key>
+    <name>B</name>
+    <desc>Parking brake</desc>
+  </key>
+  
+</PropertyList>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+  
+  <lighting>
+    <instrument-lights type="bool">false</instrument-lights>
+    <nav-lights type="bool">false</nav-lights>
+    <strobe-lights type="bool">false</strobe-lights>
+  </lighting>
+  
+  <engines>
+    <engine>
+      <magnetoL type="bool">0</magnetoL>
+      <magnetoR type="bool">0</magnetoR>
+    </engine>
+  </engines>
+  
+  <flight>
+    <flaps-anim type="int">0</flaps-anim>
+  </flight>
+  
+  <switches>
+    <transponder-pos type="double"/> <!-- Force à être un "double" au lieu d'un "bool" -->
+  </switches>
+  
+  <gear>
+    <brake-parking>1</brake-parking>
+  </gear>
+  
+</PropertyList>

@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
@@ -30,13 +30,33 @@
     <object-name>KN53.swap</object-name>
     <object-name>KN53.knob</object-name>
     <emission>
-      <red>   0.028 </red>
-      <green> 0.014 </green>
-      <blue>  0.007 </blue>
-      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+      <factor-prop>/controls/lighting/instrument-lights</factor-prop>
+      <red>   0.50 </red>
+      <green> 0.25 </green>
+      <blue>  0.25 </blue>
     </emission>
   </animation>
 
+  <animation>
+    <type>material</type>
+    <object-name>freq.101</object-name>
+    <object-name>freq.102</object-name>
+    <object-name>freq.103</object-name>
+    <object-name>freq.104</object-name>
+    <object-name>freq.105</object-name>
+    <object-name>stby.101</object-name>
+    <object-name>stby.102</object-name>
+    <object-name>stby.103</object-name>
+    <object-name>stby.104</object-name>
+    <object-name>stby.105</object-name>
+    <emission>
+      <factor-prop>/controls/lighting/instrument-lights</factor-prop>
+      <red>   2 </red>
+      <green> 2 </green>
+      <blue>  2 </blue>
+    </emission>
+  </animation>
+  
   <animation>
     <name>nav1-leds</name>
     <object-name>freq.101</object-name>
@@ -450,4 +470,3 @@
   </animation>
 
 </PropertyList>
-

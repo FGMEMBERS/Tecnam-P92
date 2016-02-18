@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
@@ -46,6 +46,11 @@
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
     <texture>texture.png</texture>
+    <specular>
+      <red-prop>specular/red</red-prop>
+      <green-prop>specular/green</green-prop>
+      <blue-prop>specular/blue</blue-prop>
+    </specular>
   </animation>
 
   <!-- Effets sur le sol -->
@@ -91,81 +96,25 @@
 
   <!-- Trainee gauche -->
   <model>
-    <path>Aircraft/Tecnam-P92/Models/Effects/wakes/wakeGA.xml</path>
+    <path>Aircraft/Tecnam-P92/Models/Effects/wakes/wakeG.xml</path>
     <offsets>
       <x-m> -0.867 </x-m>
       <y-m> -0.877 </y-m>
       <z-m> -1.483 </z-m>
-      <roll-deg>    0 </roll-deg>
       <pitch-deg> -45 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
   <!-- Trainee droite -->
   <model>
-    <path>Aircraft/Tecnam-P92/Models/Effects/wakes/wakeDA.xml</path>
+    <path>Aircraft/Tecnam-P92/Models/Effects/wakes/wakeD.xml</path>
     <offsets>
       <x-m> -0.867 </x-m>
       <y-m>  0.877 </y-m>
       <z-m> -1.483 </z-m>
-      <roll-deg>    0 </roll-deg>
       <pitch-deg> -45 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
-
-  <!-- Eclaboussures, avant gauche
-  <model>
-    <path>Aircraft/Tecnam-P92/Models/Effects/wakes/jetGA.xml</path>
-    <offsets>
-      <x-m> -3.459 </x-m>
-      <y-m> -0.877 </y-m>
-      <z-m> -1.256 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg> -90 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
-    </offsets>
-  </model> -->
-
-  <!-- Eclaboussures, avant droite
-  <model>
-    <path>Aircraft/Tecnam-P92/Models/Effects/wakes/jetDA.xml</path>
-    <offsets>
-      <x-m> -3.459 </x-m>
-      <y-m>  0.877 </y-m>
-      <z-m> -1.256 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg> -90 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
-    </offsets>
-  </model> --> 
-
-  <!-- Eclaboussures, centre gauche
-  <model>
-    <path>Aircraft/Tecnam-P92/Models/Effects/wakes/jetmGA.xml</path>
-    <offsets>
-      <x-m> -0.867 </x-m>
-      <y-m> -0.877 </y-m>
-      <z-m> -1.483 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg> -90 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
-    </offsets>
-  </model> --> 
-
-  <!-- Eclaboussures, centre droite
-  <model>
-    <path>Aircraft/Tecnam-P92/Models/Effects/wakes/jetmDA.xml</path>
-    <offsets>
-      <x-m> -0.867 </x-m>
-      <y-m>  0.877 </y-m>
-      <z-m> -1.483 </z-m>
-      <roll-deg>    0 </roll-deg>
-      <pitch-deg> -90 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
-    </offsets>
-  </model> -->
 
   <animation>
     <name>EnsembleAvantG</name>

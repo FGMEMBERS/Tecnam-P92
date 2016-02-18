@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
-
+  
   <path>magneto.ac</path>
-
+  
   <animation>
     <object-name>fond</object-name>
     <object-name>Clutch.guard</object-name>
     <object-name>Clutch.switch</object-name>
   </animation>
-
+  
   <animation>
     <type>pick</type>
     <object-name>Clutch.guard</object-name>
@@ -19,13 +19,9 @@
         <command>property-toggle</command>
         <property>controls/engines/engine/magnetoguardR</property>
       </binding>
-      <!--<binding>
-        <command>property-toggle</command>
-        <property>sim/model/sound/click</property>
-      </binding>-->
     </action>
   </animation>
-
+  
   <animation>
     <type>pick</type>
     <object-name>Clutch.switch</object-name>
@@ -47,7 +43,7 @@
       </binding>
     </action>
   </animation>
-
+  
   <animation>
     <type>rotate</type>
     <object-name>Clutch.guard</object-name>
@@ -64,23 +60,17 @@
       <z>  0 </z>
     </axis>
   </animation>
-
+  
   <animation>
     <type>rotate</type>
     <object-name>Clutch.switch</object-name>
     <property>controls/engines/engine/magnetoR-pos</property>
     <factor> 30 </factor>
-    <center>
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
-    </center>
     <axis>
       <x>  0 </x>
       <y> -1 </y>
       <z>  0 </z>
     </axis>
   </animation>
-
+  
 </PropertyList>
-
